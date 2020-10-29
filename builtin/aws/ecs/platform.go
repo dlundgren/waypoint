@@ -1218,13 +1218,13 @@ func (p *Platform) Destroy(
 
 type ALBConfig struct {
 	// Certificate ARN to attach to the load balancer
-	CertificateId string `hcl:"certificate"`
+	CertificateId string `hcl:"certificate,optional"`
 
 	// Route53 Zone to setup record in
-	ZoneId string `hcl:"zone_id"`
+	ZoneId string `hcl:"zone_id,optional"`
 
 	// Fully qualified domain name of the record to create in the target zone id
-	FQDN string `hcl:"domain_name"`
+	FQDN string `hcl:"domain_name,optional"`
 
 	// When set, waypoint will configure the target group into the specified
 	// ALB Listener ARN. This allows for usage of existing ALBs.
